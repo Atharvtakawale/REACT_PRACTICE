@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* ✅ PARENT: supports multiple cards */
+.parent {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  padding: 30px;
+
+  display: flex;
+  flex-wrap: wrap;              /* allows multiple rows */
+  gap: 20px;                    /* spacing between cards */
+
+  justify-content: flex-start;  /* align left */
+  align-items: flex-start;      /* align top */
+}
+
+/* ✅ CARD */
+.card {
+  height: 400px;
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* TOP SECTION */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.top button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: #f3f3f3;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.top button:hover {
+  background: #e5e5e5;
+}
+
+/* CENTER */
+.center {
+  margin-top: 10px;
+}
+
+.center h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.center h3 span {
+  font-size: 12px;
+  color: gray;
+  margin-left: 6px;
+}
+
+.center h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 1.3;
+}
+
+/* TAGS */
+.box4 {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.box4 h4 {
+  background: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* BOTTOM */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.bottom h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bottom p {
+  font-size: 12px;
+  color: gray;
+  margin-top: 2px;
+}
+
+.bottom button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s ease;
+}
+
+.bottom button:hover {
+  background: #333;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 768px) {
+  .parent {
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
